@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PeripheralListViewController">
+            <connections>
+                <outlet property="tableView" destination="XWg-Rm-HoX" id="0kT-SC-n8a"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XWg-Rm-HoX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="4ds-7Q-NDL"/>
+                        <outlet property="delegate" destination="-1" id="ALh-2W-cFE"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMB-tY-Wsy">
+                    <rect key="frame" x="50" y="563" width="62" height="30"/>
+                    <state key="normal" title="开始搜索"/>
+                    <connections>
+                        <action selector="startScan:" destination="-1" eventType="touchUpInside" id="5fX-YK-etC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFh-P7-Gx3">
+                    <rect key="frame" x="263" y="563" width="62" height="30"/>
+                    <state key="normal" title="取消搜索"/>
+                    <connections>
+                        <action selector="stopScan:" destination="-1" eventType="touchUpInside" id="Mvf-8t-dfY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eMB-tY-Wsy" secondAttribute="bottom" constant="10" id="02j-AI-omq"/>
+                <constraint firstItem="eMB-tY-Wsy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="3fP-gy-8xy"/>
+                <constraint firstAttribute="trailing" secondItem="XWg-Rm-HoX" secondAttribute="trailing" id="58K-h1-qDg"/>
+                <constraint firstAttribute="bottom" secondItem="XWg-Rm-HoX" secondAttribute="bottom" constant="60" id="N7K-fK-w7j"/>
+                <constraint firstAttribute="bottom" secondItem="sFh-P7-Gx3" secondAttribute="bottom" constant="10" id="Nna-Iz-3Ey"/>
+                <constraint firstItem="XWg-Rm-HoX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WfN-2B-lOA"/>
+                <constraint firstItem="XWg-Rm-HoX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ewf-5D-Y54"/>
+                <constraint firstAttribute="trailing" secondItem="sFh-P7-Gx3" secondAttribute="trailing" constant="50" id="lPP-Ys-w46"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
